@@ -1,0 +1,4 @@
+*.nix
+.git*
+.nixignore
+.pre-commit-config.yaml
