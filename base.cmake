@@ -13,6 +13,11 @@
 # You should have received a copy of the GNU General Public License along with
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 
+if(JRL_CMAKEMODULES_BASE_INCLUDED)
+  return()
+endif()
+set(JRL_CMAKEMODULES_BASE_INCLUDED ON)
+
 # ------ # README # ------ #
 
 # .rst: .. ifmode:: user
