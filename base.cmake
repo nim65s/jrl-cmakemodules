@@ -14,7 +14,10 @@
 # this program.  If not, see <http://www.gnu.org/licenses/>.
 
 if(JRL_CMAKEMODULES_BASE_INCLUDED)
+    message(WARNING "JRL-cmakemodules base.cmake was already included")
   return()
+else()
+    message(WARNING "Including JRL-cmakemodules base.cmake ")
 endif()
 set(JRL_CMAKEMODULES_BASE_INCLUDED ON)
 
