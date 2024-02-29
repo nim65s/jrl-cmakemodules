@@ -19,7 +19,7 @@ if(JRL_CMAKEMODULES_BASE_INCLUDED)
 else()
     message(WARNING "Including JRL-cmakemodules base.cmake ")
 endif()
-set(JRL_CMAKEMODULES_BASE_INCLUDED ON)
+set(JRL_CMAKEMODULES_BASE_INCLUDED ON CACHE INTERNAL "source_list")
 
 # ------ # README # ------ #
 
