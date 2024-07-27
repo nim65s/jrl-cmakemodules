@@ -525,7 +525,7 @@ macro(_SETUP_PROJECT_DOCUMENTATION)
       # FIXME: it is impossible to trigger documentation installation at
       # install, so put the target in ALL instead.
       add_custom_target(
-        ${PROJECT_NAME}-doc
+        ${PROJECT_NAME}-doc ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${JRL_CMAKEMODULE_DOXYFILE_PATH}
         WORKING_DIRECTORY doc
         COMMENT "Generating Doxygen documentation")
@@ -571,13 +571,6 @@ macro(_SETUP_PROJECT_DOCUMENTATION)
       _set_if_undefined(DOXYGEN_HTML_STYLESHEET
                         "${PROJECT_JRL_CMAKE_MODULE_DIR}/doxygen/doxygen.css")
     endif(DOXYGEN_USE_TEMPLATE_CSS)
-
-    add_custom_command(
-      OUTPUT ${PROJECT_BINARY_DIR}/doc/${PROJECT_NAME}.doxytag
-             ${PROJECT_BINARY_DIR}/doc/doxygen-html
-      COMMAND ${DOXYGEN_EXECUTABLE} ${JRL_CMAKEMODULE_DOXYFILE_PATH}
-      WORKING_DIRECTORY doc
-      COMMENT "Generating Doxygen documentation")
 
     # Clean generated files.
     set_property(
